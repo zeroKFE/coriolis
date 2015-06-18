@@ -1,5 +1,6 @@
 
 #outfit {
+  position: relative;
   max-width: 1600px;
   margin: 0 auto;
   .user-select-none();
@@ -29,17 +30,22 @@
 }
 
 #summary {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  background: @bgBlack;
+  position: absolute;
+  z-index: 2;
   box-sizing: border-box;
   width: 100%;
-  padding: 0.5em 0.2em;
+  padding: 0 0.2em;
   font-size: 0.9em;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 
   #summaryTable {
     .user-select-none();
     width: 100%;
-    border-collapse: collapse;
+    border-left: 1px solid @primary-disabled;
+    border-bottom: 1px solid @primary-disabled;
+    border-right: 1px solid @primary-disabled;
   }
 }
 
